@@ -6,7 +6,7 @@ Vue.use(VueRouter);
 export default new VueRouter({
     scrollBehavior: () => ({ y: 0 }),
     routes: [
-        { path: '/', redirect: '/appData' },
+        { path: '/', redirect: '/addData' },
         { path: '/addData', component: () => import('./../components/AddData.vue') },
         { path: '/data', component: () => import('./../components/Data.vue') },
         { path: '/logs', component: () => import('./../components/Logs.vue') }
