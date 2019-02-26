@@ -42,7 +42,6 @@
       socketLogin: function() { this.$socket.emit('login'); }
     },
     mounted() {
-      this.$router.push('/addData');
       this.socketLogin();
     }
   }
