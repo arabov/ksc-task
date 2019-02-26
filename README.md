@@ -3,6 +3,7 @@
 ## Configurating
 
 [backend/config.json](backend/config.json) - to change Redis url
+
 [frontend/config.json](backend/config.json) - to change backend url
 
 ## Run development mode 
