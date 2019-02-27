@@ -29,14 +29,12 @@
 </template>
 
 <script>
+  import routes from './routes';
+
   export default {
     data: () => ({
       drawer: true,
-      pages: [
-        { title: 'Logs', icon: 'notification_important', path: '/logs' },
-        { title: 'Data', icon: 'dns', path: '/data' },
-        { title: 'Add Data', icon: 'note_add', path: '/addData' }
-      ]
+      pages: routes
     }),
     methods: {
       socketLogin: function() { this.$socket.emit('login'); }

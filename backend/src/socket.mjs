@@ -1,7 +1,5 @@
 import { redis, socket as sockets } from './index';
-
-const convertLogs = (logs) => Object.keys(logs).map((key) => ({ event: logs[key], date: +key }))
-    , convertData = (data) => Object.keys(data).map((key) => JSON.parse(data[key]));
+import helpers from './helpers';
 
 export default (socket) => {
     console.log('Socket client connected');
@@ -15,7 +13,7 @@ export default (socket) => {
             , data = await redis.hgetall('data')
         ;
 
-        sockets.emit('update_all', { logs: convertLogs(logs), data: convertData(data) });
+        sockets.emit('update_all', { logs: helpers.convertLogs(logs), data: helpers.convertData(data) });
     });
 
     socket.on('data', async (object) => {
@@ -28,7 +26,7 @@ export default (socket) => {
             , data = await redis.hgetall('data')
         ;
 
-        sockets.emit('update_all', { logs: convertLogs(logs), data: convertData(data) });
+        sockets.emit('update_all', { logs: helpers.convertLogs(logs), data: helpers.convertData(data) });
     });
 
 };
