@@ -11,7 +11,7 @@ App needs: [Node.js](https://nodejs.org/en/), [Redis](https://redis.io).
 
 [backend/config.json](backend/config.json) - to change Redis url
 
-[frontend/config.json](backend/config.json) - to change backend url
+[frontend/config.json](frontend/config.json) - to change backend url
 
 
 ### Run development mode 
