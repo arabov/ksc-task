@@ -1,10 +1,10 @@
 # ksc-task
 
+App stack: [Vue.js](https://vuejs.org), [Express](https://expressjs.com), [Socket.IO](https://socket.io), [Redis](https://redis.io).
+
 ## Dependencies
 
-App needs:
-1. [Node.js](https://nodejs.org/en/)
-2. [Redis](https://redis.io)
+App needs: [Node.js](https://nodejs.org/en/), [Redis](https://redis.io).
 
 
 ## Configurating
